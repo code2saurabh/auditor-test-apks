@@ -1,1 +1,16 @@
 Hey There.
+
+
+
+ls tools/ios_appium_tapper.py tools/requirements-appium-ios.txt journeys/next_ios.txt
+
+pip install -r tools/requirements-appium-ios.txt
+
+
+echo "user=$BROWSERSTACK_USERNAME key set=${BROWSERSTACK_ACCESS_KEY:+yes}"
+
+
+python3 tools/ios_appium_tapper.py --check
+
+
+python3 tools/ios_appium_tapper.py --dump-source --app bs://b4aaa3fe213f3686fa2f1c45d83903c5c5376842 --device "iPhone 14" --os-version 16
